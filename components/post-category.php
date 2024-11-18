@@ -21,6 +21,6 @@ function nbt_post_category($the_post_id, $link = true)
     $categories = get_the_category($the_post_id);
     $category = $categories ? $categories[0] : '';
     $category = $category ? $category : '';
-    $category = $link ? '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>' : $category->name;
+    $category = $link ? '<a href="' . get_category_link($category->term_id) . '" title="' . $category->name . '">' . $category->name . '</a>' : $category->name;
     return $category;
 }

@@ -9,13 +9,14 @@
 defined('ABSPATH') || die('No script kiddies please!');
 
 ?>
-<div id="headline" class="section section-small">
+<section id="headline" class="section section-small">
     <div class="inner-section">
         <div class="container">
             <div class="wrapper">
-                <div class="items vertical headline-item">
+                <h2 class="head-smaller section-head">Headline News:</h2>
+                <div class="items vertical">
                     <?php
-                    $query = nbt_query_headline();
+                    $query = nbt_query_headline(5);
                     if ($query->have_posts()) {
                         while ($query->have_posts()) {
                             $query->the_post();
@@ -29,4 +30,4 @@ defined('ABSPATH') || die('No script kiddies please!');
             </div>
         </div>
     </div>
-</div>
+</section>

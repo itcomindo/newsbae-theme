@@ -144,6 +144,14 @@
           }
         }
       }
+      .bot {
+        h3 {
+          a {
+            text-decoration: underline;
+            color: var(--cp3-dark);
+          }
+        }
+      }
     }
   }
 }

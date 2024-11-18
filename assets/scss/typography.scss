@@ -156,3 +156,7 @@ a {
   font-size: var(--font-clamp-5);
   line-height: 1.2;
 }
+
+.section-head {
+  border-bottom: 1px solid var(--transparent-dark-1);
+}
