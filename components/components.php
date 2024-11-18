@@ -22,3 +22,4 @@ require_once THEME_PATH . '/components/post-author.php';
 require_once THEME_PATH . '/components/site-description.php';
 require_once THEME_PATH . '/components/icons.php';
 require_once THEME_PATH . '/components/post-readmore-link.php';
+require_once THEME_PATH . '/components/edit-post.php';
