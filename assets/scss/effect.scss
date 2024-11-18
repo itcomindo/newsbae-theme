@@ -1,0 +1,170 @@
+:root {
+  --box-shadow-1: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --box-shadow-2: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --box-shadow-3: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --box-shadow-4: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --box-shadow-5: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --box-shadow-6: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --box-shadow-none: 0 0 #0000;
+}
+
+/**
+    =========================
+    * Box Shadow
+    * @todo box-shadow
+    *=========================
+    */
+
+.box-shadow-1 {
+  box-shadow: var(--box-shadow-1);
+}
+.box-shadow-2 {
+  box-shadow: var(--box-shadow-2);
+}
+.box-shadow-3 {
+  box-shadow: var(--box-shadow-3);
+}
+.box-shadow-4 {
+  box-shadow: var(--box-shadow-4);
+}
+
+.borad-3 {
+  border-radius: 3px;
+}
+
+.borad-4 {
+  border-radius: 4px;
+}
+
+.borad-5 {
+  border-radius: 5px;
+}
+
+.borad-6 {
+  border-radius: 6px;
+}
+
+.borad-7 {
+  border-radius: 7px;
+}
+
+.borad-8 {
+  border-radius: 8px;
+}
+
+.borad-9 {
+  border-radius: 9px;
+}
+
+.borad-10 {
+  border-radius: 10px;
+}
+
+.borad-11 {
+  border-radius: 11px;
+}
+
+.borad-12 {
+  border-radius: 12px;
+}
+
+.borad-13 {
+  border-radius: 13px;
+}
+
+.borad-14 {
+  border-radius: 14px;
+}
+
+.borad-15 {
+  border-radius: 15px;
+}
+
+.borad-16 {
+  border-radius: 16px;
+}
+
+.borad-17 {
+  border-radius: 17px;
+}
+
+.borad-18 {
+  border-radius: 18px;
+}
+
+.borad-19 {
+  border-radius: 19px;
+}
+
+.borad-20 {
+  border-radius: 20px;
+}
+
+.borad-21 {
+  border-radius: 21px;
+}
+
+.borad-22 {
+  border-radius: 22px;
+}
+
+.borad-23 {
+  border-radius: 23px;
+}
+
+.borad-24 {
+  border-radius: 24px;
+}
+
+.borad-25 {
+  border-radius: 25px;
+}
+
+.borad-50 {
+  border-radius: 50%;
+}
+
+.items.vertical {
+  .item {
+    .top {
+      a {
+        img {
+          transition: 0.2s ease-in-out all;
+        }
+      }
+    }
+    &:hover {
+      .top {
+        a {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.items.horizontal {
+  .item {
+    .left {
+      a {
+        img {
+          transition: 0.2s ease-in-out all;
+        }
+      }
+    }
+    &:hover {
+      .left {
+        a {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

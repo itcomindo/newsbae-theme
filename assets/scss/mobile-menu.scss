@@ -1,0 +1,86 @@
+#mm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 100%;
+  background-color: black;
+  color: white;
+  transform: translateX(-350px);
+  z-index: 5555;
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+  display: none;
+
+  @media (max-width: 840px) {
+    display: block;
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: transparent;
+    z-index: -1;
+    &.active {
+      color: white;
+      z-index: 0;
+      right: -30px;
+      transition: 0.3s linear all;
+    }
+  }
+  .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+    .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        text-align: center;
+        a {
+          display: block;
+          color: white;
+        }
+      }
+    }
+
+    .bot {
+      display: flex;
+      flex-direction: column;
+
+      nav {
+        box-sizing: border-box;
+        ul {
+          display: flex;
+          flex-direction: column;
+          box-sizing: border-box;
+          width: 100%;
+          gap: 10px;
+          li {
+            width: 100%;
+            box-sizing: border-box;
+            border-bottom: 1px dashed var(--transparent-light-2);
+            a {
+              display: block;
+              width: 100%;
+              box-sizing: border-box;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

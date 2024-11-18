@@ -1,0 +1,19 @@
+#header {
+  height: 100px;
+  background-color: silver;
+  .inner-section {
+    height: 100%;
+    .container {
+      height: 100%;
+      .wrapper {
+        height: 100%;
+        .items {
+          height: 100%;
+          display: grid;
+          grid-template-columns: 200px 1fr;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

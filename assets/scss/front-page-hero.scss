@@ -1,0 +1,45 @@
+#fp-hero {
+  background-color: var(--cp1-light);
+  background-color: var(--color-light-1);
+  .inner-section {
+    height: 100%;
+    .container {
+      height: 100%;
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+        align-items: center;
+        .left {
+          display: flex;
+          flex-direction: column;
+
+          @media (max-width: 540px) {
+            h1 {
+              font-size: var(--font-clamp-3);
+            }
+          }
+          @media (max-width: 425px) {
+            h1 {
+              font-size: var(--font-clamp-2);
+            }
+            p {
+              font-size: 85%;
+            }
+          }
+        }
+        .right {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

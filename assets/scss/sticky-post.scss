@@ -1,0 +1,99 @@
+#sticky {
+  background-color: var(--cp1-dark);
+  color: var(--color-light-1);
+  .inner-section {
+    .container {
+      padding-bottom: 5rem;
+      .wrapper {
+        display: block;
+        position: relative;
+        padding-top: 5rem;
+
+        .flickity-button {
+          top: 2rem;
+          &.previous {
+            left: 0;
+          }
+          &.next {
+            left: 50px;
+          }
+          &.flickity-prev-next-button {
+            width: 25px;
+            height: 25px;
+            border-radius: unset;
+          }
+        }
+
+        .flickity-page-dots {
+          .dot {
+            background-color: var(--color-light-1);
+            border-radius: unset;
+            &.is-selected {
+              background-color: var(--cp3-light);
+              width: 30px;
+            }
+          }
+        }
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          width: calc(100% / 4 - 10px);
+          margin: 0 10px;
+
+          @media (max-width: 840px) {
+            width: calc(100% / 3 - 10px);
+          }
+
+          @media (max-width: 640px) {
+            width: calc(100% / 2 - 10px);
+          }
+
+          @media (max-width: 424px) {
+            width: 100%;
+          }
+
+          .top {
+            position: relative;
+            aspect-ratio: 16/9;
+
+            .post-comment-icon {
+              position: absolute;
+              background-color: var(--transparent-light-4);
+              left: 8px;
+              top: 8px;
+            }
+            a {
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            .icon {
+              position: absolute;
+              top: 8px;
+              right: 8px;
+              z-index: 2;
+              background-color: var(--transparent-light-7);
+              color: var(--color-primary);
+              i {
+                font-size: 60%;
+              }
+            }
+          }
+          .bot {
+            padding: 1rem;
+            h3 {
+              a {
+                color: var(--color-light-1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

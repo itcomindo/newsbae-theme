@@ -1,0 +1,44 @@
+/**
+  =========================
+  * Button
+  * @todo Button
+  *=========================
+  */
+
+a {
+  &.btn {
+    display: block;
+    transition: 0.3s linear all;
+
+    &.max-width {
+      width: max-content;
+    }
+
+    &.border {
+      border-width: 1px;
+      border-style: solid;
+    }
+
+    &.light {
+      color: var(--cp1-light);
+      border-color: var(--cp1-light);
+    }
+
+    &.dark {
+      background-color: var(--cp1-dark);
+      color: var(--color-light-1);
+    }
+
+    &.medium {
+      padding: 0.5rem 1rem;
+    }
+
+    &.big {
+      padding: 10px 1.5rem;
+    }
+
+    &.borad-5 {
+      border-radius: 5px;
+    }
+  }
+}

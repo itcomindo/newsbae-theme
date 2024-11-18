@@ -1,0 +1,16 @@
+/**
+  =========================
+  * List Style
+  * @todo List Style
+  *=========================
+  */
+ul.list-no-style,
+ol.list-no-style {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0px;
+}

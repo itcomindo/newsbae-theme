@@ -1,0 +1,40 @@
+form {
+  width: auto;
+  box-sizing: border-box;
+
+  input,
+  textarea,
+  button {
+    box-sizing: border-box;
+  }
+
+  &.horizontal {
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &.small {
+    input {
+      padding: 4px 8px;
+    }
+  }
+
+  input[type="text"] {
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      font-size: 80%;
+    }
+  }
+  button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    border-radius: 5px;
+    border: none;
+  }
+}

@@ -1,0 +1,184 @@
+/**
+  =========================
+  * Box
+  * @todo Box
+  *=========================
+  */
+
+section,
+.section {
+  display: block;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  transition: 0.3s linear all;
+}
+div {
+  width: 100%;
+  max-width: 100%;
+}
+div,
+select,
+textarea,
+input {
+  box-sizing: border-box;
+}
+
+section.dummy-section {
+  height: 100vh;
+  background-color: black;
+}
+
+.section-small {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.section-normal {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+.section-medium {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+.section-high {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+
+  @media (max-width: 540px) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+.section-higher {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
+.section-highest {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
+.inner-section {
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+}
+.wrapper {
+  width: 1046px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-center {
+  align-items: center;
+}
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+/**
+    =========================
+    * Gap
+    * @todo Gap
+    *=========================
+    */
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-175 {
+  gap: 1.75rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+.gap-25 {
+  gap: 2.5rem;
+}
+.gap-3 {
+  gap: 3rem;
+}
+
+/**
+    =========================
+    * Aspect Ratio
+    * @todo Aspect Ratio
+    *=========================
+    */
+
+.aspect-ratio-169 {
+  aspect-ratio: 16/9;
+}
+
+.aspect-ratio-43 {
+  aspect-ratio: 4/3;
+}
+
+.aspect-ratio-32 {
+  aspect-ratio: 3/2;
+}
+
+.aspect-ratio-11 {
+  aspect-ratio: 1/1;
+}
+
+/**
+  =========================
+  * Layout
+  * @todo Layout
+  *=========================
+  */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
