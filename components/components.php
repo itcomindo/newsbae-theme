@@ -18,5 +18,7 @@ require_once THEME_PATH . '/components/post-excerpt.php';
 require_once THEME_PATH . '/components/post-category.php';
 require_once THEME_PATH . '/components/post-tag.php';
 require_once THEME_PATH . '/components/site-title.php';
+require_once THEME_PATH . '/components/post-author.php';
 require_once THEME_PATH . '/components/site-description.php';
 require_once THEME_PATH . '/components/icons.php';
+require_once THEME_PATH . '/components/post-readmore-link.php';

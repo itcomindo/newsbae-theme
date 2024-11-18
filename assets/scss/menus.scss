@@ -87,6 +87,8 @@
                     height: auto;
                     width: 100%;
                     border-bottom: 1px dashed var(--transparent-light-1);
+                    align-items: flex-end;
+                    text-align: left;
                   }
 
                   a {
@@ -97,6 +99,10 @@
                     width: 100%;
                     padding: 2px 4px;
                     color: var(--color-light-1);
+                    @media (max-width: 1024px) {
+                      align-items: flex-start;
+                      text-align: left;
+                    }
                   }
                 }
               }
