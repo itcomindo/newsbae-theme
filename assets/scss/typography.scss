@@ -160,3 +160,10 @@ a {
 .section-head {
   border-bottom: 1px solid var(--transparent-dark-1);
 }
+
+.cat,
+.meta,
+.author,
+.date {
+  font-size: 80%;
+}

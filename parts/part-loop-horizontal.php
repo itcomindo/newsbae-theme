@@ -11,14 +11,14 @@ defined('ABSPATH') || die('No script kiddies please!');
 ?>
 
 <div class="item">
-    <div class="cat"><a href="#">Category Name</a></div>
+    <div class="cat"><?php echo nbt_post_category($the_post_id, true); ?></div>
     <div class="left">
-        <a href="#">FIM</a>
+        <a href="<?php echo get_the_permalink(); ?>"><?php echo nbt_post_featured_image($the_post_id, 'full', true); ?></a>
     </div>
     <div class="right">
-        <h3><a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur libero</a></h3>
-        <span class="excerpt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, repellat!</span>
-        <span class="date">November 20, 2024</span>
-        <span class="author">Budi Haryono</span>
+        <h3><a href="<?php echo get_the_permalink(); ?>"><?php echo nbt_post_title($the_post_id, 100); ?></a></h3>
+        <span class="excerpt"><?php echo nbt_post_excerpt($the_post_id, 80); ?></span>
+        <span class="date"><?php echo nbt_post_date($the_post_id); ?></span>
+        <span class="author"><?php echo nbt_post_author($the_post_id, true); ?></span>
     </div>
 </div>

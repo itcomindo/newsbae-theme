@@ -766,6 +766,13 @@ a {
   border-bottom: 1px solid var(--transparent-dark-1);
 }
 
+.cat,
+.meta,
+.author,
+.date {
+  font-size: 80%;
+}
+
 :root {
   --box-shadow-1: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --box-shadow-2: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -921,6 +928,152 @@ a {
 .items.horizontal .item:hover .left a img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+/*! Flickity v2.3.0
+https://flickity.metafizzy.co
+---------------------------------------------- */
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus {
+  outline: none;
+}
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* draggable */
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* ---- flickity-button ---- */
+.flickity-button {
+  position: absolute;
+  background: hsla(0, 0%, 100%, 0.75);
+  border: none;
+  color: #333;
+}
+
+.flickity-button:hover {
+  background: white;
+  cursor: pointer;
+}
+
+.flickity-button:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 5px #19f;
+  box-shadow: 0 0 0 5px #19f;
+}
+
+.flickity-button:active {
+  opacity: 0.6;
+}
+
+.flickity-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+  /* prevent disabled button from capturing pointer up event. #716 */
+  pointer-events: none;
+}
+
+.flickity-button-icon {
+  fill: currentColor;
+}
+
+/* ---- previous/next buttons ---- */
+.flickity-prev-next-button {
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /* vertically center */
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.flickity-prev-next-button.previous {
+  left: 10px;
+}
+
+.flickity-prev-next-button.next {
+  right: 10px;
+}
+
+/* right to left */
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px;
+}
+
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px;
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+/* ---- page dots ---- */
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+}
+
+.flickity-rtl .flickity-page-dots {
+  direction: rtl;
+}
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #333;
+  border-radius: 50%;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
 }
 
 .icons.horizontal ul {
@@ -1657,4 +1810,109 @@ form button {
   #headline .inner-section .container .wrapper .items .item:nth-child(3) .bot h3, #headline .inner-section .container .wrapper .items .item:nth-child(4) .bot h3, #headline .inner-section .container .wrapper .items .item:nth-child(5) .bot h3 {
     margin: 2px 0;
   }
+}
+
+#sticky {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  background-color: var(--color-primary);
+  color: var(--bg-primary);
+}
+#sticky .inner-section .container .wrapper {
+  border-bottom: 1px solid var(--transparent-light-3);
+}
+#sticky .inner-section .container .wrapper .section-head {
+  border-color: var(--transparent-light-3);
+}
+#sticky .inner-section .container .wrapper .items {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  display: block;
+}
+#sticky .inner-section .container .wrapper .items .item {
+  width: calc(33.3333333333% - 20px);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 10px;
+}
+@media (max-width: 540px) {
+  #sticky .inner-section .container .wrapper .items .item {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 375px) {
+  #sticky .inner-section .container .wrapper .items .item {
+    width: calc(100% - 20px);
+  }
+}
+#sticky .inner-section .container .wrapper .items .item .cat {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+#sticky .inner-section .container .wrapper .items .item .cat a {
+  color: var(--bg-primary);
+}
+#sticky .inner-section .container .wrapper .items .item .left {
+  width: 200px;
+  aspect-ratio: 16/9;
+  border-radius: 7px;
+  overflow: hidden;
+}
+#sticky .inner-section .container .wrapper .items .item .left a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 7px;
+}
+#sticky .inner-section .container .wrapper .items .item .left a img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}
+#sticky .inner-section .container .wrapper .items .item .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+}
+#sticky .inner-section .container .wrapper .items .item .right .excerpt {
+  display: none;
+}
+#sticky .inner-section .container .wrapper .items .item .right h3 {
+  text-align: center;
+  font-size: var(--font-clamp-1);
+  font-weight: 400;
+  margin: 4px 0;
+}
+#sticky .inner-section .container .wrapper .items .item .right h3 a {
+  color: var(--bg-primary);
+}
+#sticky .inner-section .container .wrapper .items .item .right .date {
+  color: var(--cp3-light);
 }

@@ -45,3 +45,29 @@ function nbt_query_headline($post_perpage = 7)
     $query = new WP_Query($args);
     return $query;
 }
+
+
+/**
+ * Query sticky posts.
+ *
+ * This function retrieves all sticky posts.
+ *
+ * @param int $post_perpage Optional. Number of posts to retrieve. Default is 3.
+ *
+ * @return void
+ */
+function nbt_query_sticky_post($posts_perpage = 3)
+{
+    $args = array(
+        'post_type'      => 'post', // Tipe post, misalnya 'post' untuk blog post.
+        'post_status'    => 'publish', // Hanya tampilkan post yang diterbitkan.
+        'posts_per_page' => $posts_perpage, // Menampilkan semua sticky post.
+        'post__in'       => get_option('sticky_posts'), // Mengambil sticky post.
+        'orderby'        => 'date', // Urutkan berdasarkan tanggal.
+        'order'          => 'DESC', // Urutan dari yang terbaru.
+        'ignore_sticky_posts' => 1, // Jangan tampilkan sticky post di dalam loop.
+    );
+
+    // Query post berdasarkan argumen.
+    return new WP_Query($args);
+}

@@ -34,7 +34,15 @@ function nbt_load_assets()
     wp_enqueue_script('jquery');
 
 
-
+    //Enqueue scripts.
     wp_enqueue_script('nbt-script', THEME_ASSETS . '/js/global.min.js', array(), THEME_VERSION, true);
+
+    if (is_home()) {
+        //Load Flickity.
+        wp_enqueue_script('flickity', 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js', array(), '2.2.2', true);
+
+        //Load home.min.js.
+        wp_enqueue_script('nbt-home', THEME_ASSETS . '/js/home.min.js', array(), THEME_VERSION, true);
+    }
 }
 add_action('wp_enqueue_scripts', 'nbt_load_assets');
