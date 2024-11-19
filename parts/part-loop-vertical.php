@@ -11,8 +11,10 @@ defined('ABSPATH') || die('No script kiddies please!');
 ?>
 
 <div class="item">
+
     <div class="cat"><?php echo nbt_post_category($the_post_id, true); ?></div>
     <div class="top">
+        <?php nbt_post_icon($the_post_id); ?>
         <a href="<?php echo esc_html(get_the_permalink($the_post_id)); ?>"><?php echo nbt_post_featured_image($the_post_id, 'full', false); ?></a>
     </div>
     <div class="bot">
