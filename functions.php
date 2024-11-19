@@ -12,22 +12,6 @@ add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
 add_theme_support('menus');
 
-
-
-/**
- * Disable unwanted features.
- */
-function disable_unwanted_features()
-{
-    // Disable Gutenberg Block Editor.
-    add_filter('use_block_editor_for_post', '__return_false', 10);
-}
-add_action('init', 'disable_unwanted_features');
-
-
-
-
-
 /**
  * Calls the Carbon Fields plugin.
  *
