@@ -109,6 +109,15 @@ function nbt_query_video_post($posts_perpage = 4)
 
 
 
+/**
+ * Query and display gallery posts.
+ *
+ * This function queries for posts with a meta key '_nbt_post' set to 'gallery' and displays them.
+ *
+ * @param int $posts_perpage Number of posts to display per page. Default is 4.
+ *
+ * @return void
+ */
 function nbt_query_gallery_post($posts_perpage = 4)
 {
     $args = array(
@@ -137,4 +146,45 @@ function nbt_query_gallery_post($posts_perpage = 4)
     }
     echo '</div>';
     wp_reset_postdata();
+}
+
+
+/**
+ * Perform a custom WP_Query to retrieve posts excluding certain posts.
+ *
+ * This function performs two queries:
+ * 1. The first query retrieves a list of post IDs to exclude.
+ * 2. The second query retrieves the desired posts, excluding the previously retrieved post IDs.
+ *
+ * @param int $post_to_exclude Number of posts to exclude. Default is 7.
+ * @param int $post_perpage Number of posts to retrieve per page. Default is 3.
+ * @return WP_Query The custom query object containing the retrieved posts.
+ */
+function nbt_rest_post_query($post_to_exclude = 5, $post_perpage = 6)
+{
+    $exclude_args  = array(
+        'post_type'      => 'post',
+        'post_status'    => 'publish',
+        'posts_per_page' => $post_to_exclude,
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+        'fields'         => 'ids',
+        'ignore_sticky_posts' => 1,
+    );
+    $exclude_query = new WP_Query($exclude_args);
+    $exclude_ids   = $exclude_query->posts;
+
+    $args = array(
+        'post_type'           => 'post',
+        'post_status'         => 'publish',
+        'posts_per_page'      => $post_perpage,
+        'orderby'             => 'date',
+        'order'               => 'DESC',
+        'ignore_sticky_posts' => 1,
+        'post__not_in'        => $exclude_ids,
+        'paged'               => min(get_query_var('paged') ? get_query_var('paged') : 1, $total_pages),
+    );
+    $query = new WP_Query($args);
+
+    return $query;
 }

@@ -18,18 +18,38 @@ defined('ABSPATH') || die('No script kiddies please!');
                 <div class="news-box-content">
                     <div class="left">
                         <div class="inner-left">
+
+                            <!-- Video Post -->
                             <div class="content">
                                 <h3>Video:</h3>
                                 <?php
                                 nbt_query_video_post($posts_perpage = 3);
                                 ?>
                             </div>
+
+                            <!-- ADS Full Width 1 -->
+                            <div class="content">
+                                <?php
+                                get_template_part('parts/part', 'ads-full-width');
+                                ?>
+                            </div>
+
+                            <!-- Foto Post -->
                             <div class="content">
                                 <h3>Foto:</h3>
                                 <?php
                                 nbt_query_gallery_post($posts_perpage = 3);
                                 ?>
                             </div>
+
+                            <!-- ADS Full Width 2 -->
+                            <div class="content">
+                                <?php
+                                get_template_part('parts/part', 'ads-full-width');
+                                ?>
+                            </div>
+
+
                             <div class="content">
                                 <h3>Post Post Feed</h3>
                             </div>

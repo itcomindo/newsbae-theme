@@ -1,0 +1,20 @@
+.ads {
+  padding: 10px;
+  border-radius: 7px;
+  overflow: hidden;
+  &.width-full {
+    background-color: var(--color-light-3);
+    .ads-inner {
+      .ads-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        row-gap: 10px;
+        h3 {
+          margin: 4px 0;
+        }
+      }
+    }
+  }
+}
