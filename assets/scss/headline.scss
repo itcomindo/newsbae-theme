@@ -30,16 +30,10 @@
               .icon {
                 position: absolute;
                 z-index: 1;
-                background-color: var(--transparent-light-5);
-                width: 20px;
-                height: 20px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                i {
-                  font-size: 10px;
-                }
               }
               a {
                 display: block;

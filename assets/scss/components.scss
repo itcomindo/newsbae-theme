@@ -1,4 +1,15 @@
+.icon {
+  width: 25px;
+  height: 25px;
+  background: var(--transparent-light-5);
+  border-radius: 50%;
+  i {
+    font-size: 12px;
+  }
+}
+
 .icons {
+  // icons in ul li.
   &.horizontal {
     ul {
       display: flex;
