@@ -59,15 +59,48 @@ function nbt_query_headline($post_perpage = 7)
 function nbt_query_sticky_post($posts_perpage = 3)
 {
     $args = array(
-        'post_type'      => 'post', // Tipe post, misalnya 'post' untuk blog post.
-        'post_status'    => 'publish', // Hanya tampilkan post yang diterbitkan.
-        'posts_per_page' => $posts_perpage, // Menampilkan semua sticky post.
-        'post__in'       => get_option('sticky_posts'), // Mengambil sticky post.
-        'orderby'        => 'date', // Urutkan berdasarkan tanggal.
-        'order'          => 'DESC', // Urutan dari yang terbaru.
-        'ignore_sticky_posts' => 1, // Jangan tampilkan sticky post di dalam loop.
+        'post_type'      => 'post',
+        'post_status'    => 'publish',
+        'posts_per_page' => $posts_perpage,
+        'post__in'       => get_option('sticky_posts'),
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+        'ignore_sticky_posts' => 1
     );
-
-    // Query post berdasarkan argumen.
     return new WP_Query($args);
+}
+
+
+/**
+ * Query Post by CarbonFields key _nbt_post = video.
+ * 
+ * This function retrieves all posts with meta key _nbt_post = video.
+ * @param int $post_perpage Optional. Number of posts to retrieve. Default is 4.
+ */
+function nbt_query_video_post($posts_perpage = 4)
+{
+    $args = array(
+        'post_type'      => 'post',
+        'post_status'    => 'publish',
+        'posts_per_page' => $posts_perpage,
+        'ignore_sticky_posts' => 1,
+        'meta_query'     => array(
+            array(
+                'key'     => '_nbt_post',
+                'value'   => 'video',
+                'compare' => '=',
+            ),
+        ),
+    );
+    $query = new WP_Query($args);
+    if ($query->have_posts()) {
+        echo '<div class="items video">';
+        while ($query->have_posts()) {
+            $query->the_post();
+            $the_post_id = get_the_ID();
+            get_template_part('parts/part-loop-vertical');
+        }
+    }
+    echo '</div>';
+    wp_reset_postdata();
 }

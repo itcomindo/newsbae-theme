@@ -1,35 +1,26 @@
-.sidebar {
-  box-sizing: border-box;
+aside {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
-  .container {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    .items {
+  .widget {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    h2.wp-block-heading {
+      margin: 4px 0;
+    }
+    ul {
+      list-style: none;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
-      gap: 10px;
-      .item {
-        display: flex;
-        flex-direction: column;
-
-        h2 {
-          margin: 4px 0;
-          font-size: var(--font-clamp-3);
-        }
-        h3 {
-          margin: 4px 0;
-          font-size: var(--font-clamp-2);
-        }
-
-        p {
-          margin: 4px 0;
-          line-height: 1.5;
-          font-size: 90%;
-        }
+      padding: 0;
+      margin: 0;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      padding-inline-start: 0;
+      box-sizing: border-box;
+      row-gap: 5px;
+      li {
+        box-sizing: border-box;
+        margin-bottom: 4px;
       }
     }
   }

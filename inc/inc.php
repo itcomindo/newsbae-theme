@@ -11,3 +11,5 @@ defined('ABSPATH') || die('No script kiddies please!');
 require_once THEME_PATH . '/inc/queries.php';
 require_once THEME_PATH . '/inc/menus.php';
 require_once THEME_PATH . '/inc/options/options.php';
+require_once THEME_PATH . '/inc/sidebars.php';
+require_once THEME_PATH . '/inc/plugins/plugins.php';

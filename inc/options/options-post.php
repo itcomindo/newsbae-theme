@@ -22,6 +22,7 @@ function nbt_post_type()
                         'standard' => 'Standard',
                         'video' => 'Video',
                         'gallery' => 'Gallery',
+                        'resep' => 'Resep',
                     ))
                     ->set_default_value('standard'),
             ),

@@ -3,8 +3,30 @@
   height: 25px;
   background: var(--transparent-light-5);
   border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   i {
     font-size: 12px;
+  }
+}
+
+.cat {
+  width: max-content;
+  background: var(--transparent-light-7);
+  padding: 0 8px;
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  &.more {
+    display: block;
+    width: max-content;
+    position: relative;
+    font-size: 80%;
+    text-decoration: underline;
   }
 }
 
@@ -17,5 +39,23 @@
         width: 30px;
       }
     }
+  }
+}
+
+.edit-post {
+  font-size: 50%;
+  position: absolute;
+  a {
+    text-decoration: underline;
+    color: var(--cp3-dark);
+  }
+  @media (max-width: 1919px) {
+    display: none;
+  }
+}
+
+h3 {
+  &.item-post-title {
+    position: relative;
   }
 }
