@@ -59,3 +59,18 @@ h3 {
     position: relative;
   }
 }
+
+.items {
+  &.vertical {
+    .top {
+      border-radius: 5px;
+      overflow: hidden;
+    }
+  }
+  &.horizontal {
+    .left {
+      border-radius: 7px;
+      overflow: hidden;
+    }
+  }
+}

@@ -94,7 +94,7 @@ function nbt_query_video_post($posts_perpage = 4)
     );
     $query = new WP_Query($args);
     if ($query->have_posts()) {
-        echo '<div class="items video">';
+        echo '<div class="items vertical video">';
         while ($query->have_posts()) {
             $query->the_post();
             $the_post_id = get_the_ID();
@@ -126,7 +126,7 @@ function nbt_query_gallery_post($posts_perpage = 4)
     );
     $query = new WP_Query($args);
     if ($query->have_posts()) {
-        echo '<div class="items video">';
+        echo '<div class="items vertical video">';
         while ($query->have_posts()) {
             $query->the_post();
             $the_post_id = get_the_ID();
