@@ -1,12 +1,42 @@
 aside {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   .widget {
-    padding-top: 0px;
+    padding-top: 10px;
     padding-bottom: 10px;
+
+    a:has(img) {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    // Widget Heading 2.
     h2.wp-block-heading {
       margin: 4px 0;
     }
+
+    // Iframe.
+    iframe {
+      width: 100%;
+      border-radius: 7px;
+      overflow: hidden;
+    }
+
+    // Figure.
+    figure {
+      max-width: 100%;
+      overflow: hidden;
+      margin: 0;
+      border-radius: 7px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    // Widget UL.
     ul {
       list-style: none;
       display: flex;
