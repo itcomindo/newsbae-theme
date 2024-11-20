@@ -21,7 +21,8 @@ defined('ABSPATH') || die('No script kiddies please!');
                         while ($query->have_posts()) {
                             $query->the_post();
                             $the_post_id = get_the_ID();
-                            get_template_part('parts/part', 'loop-vertical');
+                            // get_template_part('parts/part', 'loop-vertical');
+                            nb_part_loop($the_post_id, 'item', 'top', 'bot', true, true, true, true, true, true, true, 'Baca Berita', true);
                         }
                     }
                     wp_reset_postdata();

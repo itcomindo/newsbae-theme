@@ -64,7 +64,7 @@
                   // for Video Post.
                   &.video {
                     display: grid;
-                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-columns: repeat(3, 1fr);
                     gap: 20px 10px;
                     overflow: hidden;
                     .item {
@@ -97,6 +97,11 @@
                             height: 100%;
                             object-fit: cover;
                           }
+                        }
+                      }
+                      .bot {
+                        h3 {
+                          font-weight: 500;
                         }
                       }
                     }

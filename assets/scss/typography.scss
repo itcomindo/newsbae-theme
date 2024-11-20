@@ -159,6 +159,10 @@ a {
 
 .section-head {
   border-bottom: 1px solid var(--transparent-dark-1);
+  &.head-smaller {
+    font-size: var(--font-clamp-2);
+    margin: 0;
+  }
 }
 
 .cat,
@@ -166,4 +170,10 @@ a {
 .author,
 .date {
   font-size: 80%;
+}
+
+h3 {
+  &.item-post-title {
+    font-size: var(--font-clamp-1);
+  }
 }

@@ -19,13 +19,16 @@ defined('ABSPATH') || die('No script kiddies please!');
                     <div class="left">
                         <div class="inner-left">
                             <div class="content">
-                                <h3>Post Video</h3>
+                                <h3>Video:</h3>
                                 <?php
-                                nbt_query_video_post($posts_perpage = 4);
+                                nbt_query_video_post($posts_perpage = 3);
                                 ?>
                             </div>
                             <div class="content">
-                                <h3>Post Gallery</h3>
+                                <h3>Foto:</h3>
+                                <?php
+                                nbt_query_gallery_post($posts_perpage = 3);
+                                ?>
                             </div>
                             <div class="content">
                                 <h3>Post Post Feed</h3>

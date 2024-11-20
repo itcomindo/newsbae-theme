@@ -5,17 +5,17 @@
   color: var(--bg-primary);
   .inner-section {
     .container {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
       .wrapper {
-        border-bottom: 1px solid var(--transparent-light-3);
+        border-bottom: 1px solid var(--transparent-light-2);
+
         .section-head {
-          border-color: var(--transparent-light-3);
+          border-color: var(--transparent-light-1);
         }
         .items {
           padding-top: 1.75rem;
           padding-bottom: 1.75rem;
-          // display: grid;
-          // grid-template-columns: repeat(3, 1fr);
-          // gap: 20px;
           display: block;
 
           .item {

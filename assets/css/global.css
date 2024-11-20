@@ -765,12 +765,20 @@ a {
 .section-head {
   border-bottom: 1px solid var(--transparent-dark-1);
 }
+.section-head.head-smaller {
+  font-size: var(--font-clamp-2);
+  margin: 0;
+}
 
 .cat,
 .meta,
 .author,
 .date {
   font-size: 80%;
+}
+
+h3.item-post-title {
+  font-size: var(--font-clamp-1);
 }
 
 :root {
@@ -1453,21 +1461,25 @@ form button {
 @media (max-width: 1024px) {
   #header-menu .inner-section .container .wrapper .items .left nav {
     position: fixed;
-    top: 0;
-    left: 0;
     width: calc(100% - 60px);
-    height: 100vh;
-    z-index: 1000;
+    height: calc(100vh - 120px);
     background-color: var(--color-primary);
-    padding: 5rem 20px 20px 20px;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+    padding: 60px 10px;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
     -webkit-transition: 0.3s linear all;
     transition: 0.3s linear all;
   }
   #header-menu .inner-section .container .wrapper .items .left nav.active {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    z-index: 1000;
+    opacity: 1;
+    left: 50%;
+    top: 60px;
+    -webkit-transform: translateX(-50%) scale(1);
+    transform: translateX(-50%) scale(1);
+    z-index: 1000;
   }
   #header-menu .inner-section .container .wrapper .items .left nav .closer {
     position: absolute;
@@ -1514,9 +1526,9 @@ form button {
     flex-direction: column;
     gap: 0;
     width: 100%;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     gap: 10px 0;
   }
 }
@@ -1543,9 +1555,9 @@ form button {
     height: auto;
     width: 100%;
     border-bottom: 1px dashed var(--transparent-light-1);
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     text-align: left;
   }
 }
@@ -1948,11 +1960,15 @@ form button {
   background-color: var(--color-primary);
   color: var(--bg-primary);
 }
+#sticky .inner-section .container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 #sticky .inner-section .container .wrapper {
-  border-bottom: 1px solid var(--transparent-light-3);
+  border-bottom: 1px solid var(--transparent-light-2);
 }
 #sticky .inner-section .container .wrapper .section-head {
-  border-color: var(--transparent-light-3);
+  border-color: var(--transparent-light-1);
 }
 #sticky .inner-section .container .wrapper .items {
   padding-top: 1.75rem;
@@ -2237,7 +2253,7 @@ form button {
 }
 #news-box .inner-section .container .wrapper .news-box-content .left .inner-left .content .items.video {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px 10px;
   overflow: hidden;
 }
@@ -2280,6 +2296,9 @@ form button {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+#news-box .inner-section .container .wrapper .news-box-content .left .inner-left .content .items.video .item .bot h3 {
+  font-weight: 500;
 }
 #news-box .inner-section .container .wrapper .news-box-content .right {
   width: 320px;

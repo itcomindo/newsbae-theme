@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 contain: true,
                 wrapAround: true,
                 prevNextButtons: false,
-                // pageDots: false,
+                pageDots: false,
                 autoPlay: 5000,
             });
         }

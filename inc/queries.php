@@ -98,7 +98,41 @@ function nbt_query_video_post($posts_perpage = 4)
         while ($query->have_posts()) {
             $query->the_post();
             $the_post_id = get_the_ID();
-            get_template_part('parts/part-loop-vertical');
+
+            // Call the part-loop.php template.
+            nb_part_loop($the_post_id, 'item', 'top', 'bot', true, true, false, false, false, false, false, 'Lihat Video', true);
+        }
+    }
+    echo '</div>';
+    wp_reset_postdata();
+}
+
+
+
+function nbt_query_gallery_post($posts_perpage = 4)
+{
+    $args = array(
+        'post_type'      => 'post',
+        'post_status'    => 'publish',
+        'posts_per_page' => $posts_perpage,
+        'ignore_sticky_posts' => 1,
+        'meta_query'     => array(
+            array(
+                'key'     => '_nbt_post',
+                'value'   => 'gallery',
+                'compare' => '=',
+            ),
+        ),
+    );
+    $query = new WP_Query($args);
+    if ($query->have_posts()) {
+        echo '<div class="items video">';
+        while ($query->have_posts()) {
+            $query->the_post();
+            $the_post_id = get_the_ID();
+
+            // Call the part-loop.php template.
+            nb_part_loop($the_post_id, 'item', 'top', 'bot', true, true, false, false, false, false, false, 'Lihat Video', true);
         }
     }
     echo '</div>';
