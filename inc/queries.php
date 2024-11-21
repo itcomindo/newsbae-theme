@@ -139,7 +139,6 @@ function nbt_query_gallery_post($posts_perpage = 4)
         while ($query->have_posts()) {
             $query->the_post();
             $the_post_id = get_the_ID();
-
             // Call the part-loop.php template.
             nb_part_loop($the_post_id, 'item', 'top', 'bot', true, true, false, false, false, false, false, 'Lihat Video', true);
         }
