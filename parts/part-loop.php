@@ -40,6 +40,7 @@ function nb_part_loop(
     $read_more_text = 'Baca Berita',
     $edit = true
 ) {
+    if (!$the_post_id) return;
 ?>
     <div class="<?php echo esc_attr($el_class); ?>">
         <?php if ($cat) : ?>
@@ -57,11 +58,11 @@ function nb_part_loop(
             <?php if ($edit) echo nbt_edit_post_link($the_post_id); ?>
             <h3 class="item-post-title">
                 <a href="<?php echo esc_html(get_the_permalink($the_post_id)); ?>">
-                    <?php echo nbt_post_title($the_post_id, 80); ?>
+                    <?php echo esc_html(nbt_post_title($the_post_id, 80)); ?>
                 </a>
             </h3>
             <?php if ($excerpt) : ?>
-                <span class="excerpt"><?php echo nbt_post_excerpt($the_post_id, 80); ?></span>
+                <span class="excerpt"><?php echo esc_html(nbt_post_excerpt($the_post_id, 80)); ?></span>
             <?php endif; ?>
 
             <?php if ($meta) : ?>

@@ -70,6 +70,11 @@
                     grid-template-columns: repeat(3, 1fr);
                     gap: 20px 10px;
                     overflow: hidden;
+
+                    @media (max-width: 540px) {
+                      grid-template-columns: repeat(2, 1fr);
+                    }
+
                     .item {
                       display: flex;
                       flex-direction: column;
@@ -77,6 +82,7 @@
                       position: relative;
                       background-color: var(--color-light-1);
                       box-shadow: var(--box-shadow-2);
+
                       .cat {
                         position: absolute;
                         top: 5px;
@@ -105,6 +111,38 @@
                       .bot {
                         h3 {
                           font-weight: 500;
+                          @media (max-width: 540px) {
+                            font-size: 85%;
+                            font-weight: 400;
+                            line-height: 1.7;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3;
+                            -webkit-box-orient: vertical;
+                            a {
+                              text-decoration: none;
+                            }
+                          }
+                        }
+                      }
+
+                      &:first-child {
+                        @media (max-width: 540px) {
+                          display: grid;
+                          grid-column: span 2;
+                          grid-template-columns: 100px 1fr;
+                          box-shadow: none;
+                          padding: 10px 0;
+                          .bot {
+                            padding-top: 0;
+                            padding-bottom: 0;
+                            h3 {
+                              margin-top: 4px;
+                              margin-bottom: 4px;
+                              font-size: 85%;
+                            }
+                          }
                         }
                       }
                     }

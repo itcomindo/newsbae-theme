@@ -17,3 +17,44 @@
     }
   }
 }
+
+// Newsticker.
+#newsticker {
+  height: 40px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  background-color: var(--cp3-dark);
+  .inner-section {
+    height: 100%;
+    .container {
+      height: 100%;
+      .wrapper {
+        height: 100%;
+        .items {
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 20px;
+          white-space: nowrap;
+          overflow: hidden;
+          font-size: 80%;
+          color: var(--color-light-1);
+          li {
+            display: inline-block;
+            white-space: nowrap;
+            color: var(--color-light-1);
+            a {
+              color: var(--color-light-1);
+            }
+            &.paused {
+              a {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
