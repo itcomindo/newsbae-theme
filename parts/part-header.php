@@ -16,7 +16,11 @@ defined('ABSPATH') || die('No script kiddies please!');
             <div class="wrapper">
                 <div class="items">
                     <div class="left"><a href="/"><img src="<?php echo esc_html(nbt_image()['logo-dark']); ?>" alt="<?php echo esc_html(nbt_site_title()); ?>"></a></div>
-                    <div class="right"></div>
+                    <div class="right">
+                        <div class="inner">
+                            <a href="#"><img src="<?php echo THEME_URL . '/assets/images/ads-728x90.webp'; ?>" alt="ads" title="ads"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

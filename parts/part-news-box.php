@@ -50,8 +50,20 @@ defined('ABSPATH') || die('No script kiddies please!');
                             </div>
 
 
-                            <div class="content">
-                                <h3>Post Post Feed</h3>
+                            <div id="rest-posts" class="content">
+                                <div class="items rest-post">
+                                    <?php
+                                    $rp = nbt_rest_post_query(5, 8);
+                                    if ($rp->have_posts()) {
+                                        while ($rp->have_posts()) {
+                                            $rp->the_post();
+                                            $the_post_id = get_the_ID();
+                                            nb_part_loop($the_post_id, 'item', 'top', 'bot', true, true, true, true, true, true, true, 'Baca Berita', true);
+                                        }
+                                    }
+                                    wp_reset_postdata();
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
