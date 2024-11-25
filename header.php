@@ -32,6 +32,7 @@ defined('ABSPATH') || die('No script kiddies please!');
     wp_body_open();
 
     get_template_part('parts/part', 'topbar');
+    get_template_part('parts/part', 'mobile-ads-before-header');
     get_template_part('parts/part', 'header');
     get_template_part('parts/part', 'header-menu');
 

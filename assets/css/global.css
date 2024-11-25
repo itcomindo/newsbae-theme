@@ -2593,6 +2593,54 @@ aside .widget ul li {
 .ads.width-full .ads-inner .ads-content h3 {
   margin: 4px 0;
 }
+.ads.width-full.m540 {
+  display: none;
+  border-radius: 0;
+}
+@media (max-width: 540px) {
+  .ads.width-full.m540 {
+    display: block;
+    height: 100vh;
+    background-color: var(--color-primary);
+    color: var(--color-light-1);
+  }
+  .ads.width-full.m540 .ads-inner {
+    height: 100%;
+    position: relative;
+  }
+  .ads.width-full.m540 .ads-inner .ads-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+  }
+  .ads.width-full.m540 .ads-inner .ads-content {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .ads.width-full.m540 .ads-inner .ads-content img {
+    max-width: 100%;
+  }
+  .ads.width-full.m540 .ads-inner .ads-content a {
+    color: var(--color-light-1);
+  }
+}
 
 #rest-posts .items.rest-post {
   display: -webkit-box;
