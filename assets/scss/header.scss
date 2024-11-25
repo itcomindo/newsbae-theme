@@ -1,6 +1,6 @@
 #header {
   height: 120px;
-  background-color: silver;
+  background-color: var(--color-light-2);
   @media (max-width: 540px) {
     height: 100px;
   }

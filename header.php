@@ -31,10 +31,13 @@ defined('ABSPATH') || die('No script kiddies please!');
     <?php
     wp_body_open();
 
+    nbt_flo_left();
+    nbt_flo_right();
     get_template_part('parts/part', 'topbar');
-    get_template_part('parts/part', 'mobile-ads-before-header');
+    get_template_part('parts/ads/part', 'mobile-ads-before-header');
     get_template_part('parts/part', 'header');
     get_template_part('parts/part', 'header-menu');
+    get_template_part('parts/ads/part', 'ads-after-header-menu');
 
 
     ?>

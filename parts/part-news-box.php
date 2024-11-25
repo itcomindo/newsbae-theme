@@ -30,7 +30,7 @@ defined('ABSPATH') || die('No script kiddies please!');
                             <!-- ADS Full Width 1 -->
                             <div class="content">
                                 <?php
-                                get_template_part('parts/part', 'ads-full-width');
+                                get_template_part('parts/ads/part', 'ads-full-width');
                                 ?>
                             </div>
 
@@ -45,7 +45,7 @@ defined('ABSPATH') || die('No script kiddies please!');
                             <!-- ADS Full Width 2 -->
                             <div class="content">
                                 <?php
-                                get_template_part('parts/part', 'ads-full-width');
+                                get_template_part('parts/ads/part', 'ads-full-width');
                                 ?>
                             </div>
 
