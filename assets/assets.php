@@ -41,6 +41,9 @@ function nbt_load_assets()
         //Load Flickity.
         wp_enqueue_script('flickity', 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js', array(), '2.2.2', true);
 
+        // Load notification.js (this is under development).
+        // wp_enqueue_script('nbt-notification', THEME_ASSETS . '/js/notification.min.js', array(), THEME_VERSION, true);
+
         //Load home.min.js.
         wp_enqueue_script('nbt-home', THEME_ASSETS . '/js/home.min.js', array(), THEME_VERSION, true);
     }

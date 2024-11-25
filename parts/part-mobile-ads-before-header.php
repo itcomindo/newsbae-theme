@@ -20,8 +20,11 @@ defined('ABSPATH') || die('No script kiddies please!');
         </div>
     </div>
     <script>
+        setTimeout(function() {
+            jQuery('#adsbfh540').addClass('active');
+        }, 1500);
         document.querySelector('#adsbfh540 .ads-close').addEventListener('click', function() {
-            jQuery('#adsbfh540').slideUp();
+            jQuery('#adsbfh540').slideUp().removeClass('active');
         });
     </script>
 </div>

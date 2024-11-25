@@ -2,6 +2,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
     jQuery(function () {
         //JQuery start below.
 
+        // make body overflow hidden start.
+        function makeBodyOverflowHidden() {
+            jQuery('body').addClass('no-scroll');
+            setTimeout(function () {
+                jQuery('body').removeClass('no-scroll');
+            }, 1000);
+        }
+        makeBodyOverflowHidden();
+        // make body overflow hidden end.
+
         // OffCanvasMenu Start.
         function offCanvasMenu() {
             var $toggle = jQuery('.bars.toggle');

@@ -2599,7 +2599,6 @@ aside .widget ul li {
 }
 @media (max-width: 540px) {
   .ads.width-full.m540 {
-    display: block;
     height: 100vh;
     background-color: var(--color-primary);
     color: var(--color-light-1);
@@ -2639,6 +2638,11 @@ aside .widget ul li {
   }
   .ads.width-full.m540 .ads-inner .ads-content a {
     color: var(--color-light-1);
+  }
+  .ads.width-full.m540.active {
+    display: block;
+    position: relative;
+    z-index: 20;
   }
 }
 
