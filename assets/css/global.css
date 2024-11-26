@@ -1268,14 +1268,27 @@ form button {
   -ms-flex-align: center;
   align-items: center;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   #topbar .inner-section .container .wrapper .items {
-    grid-template-columns: repeat(2, 1fr);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    grid-template-columns: unset;
   }
 }
 @media (max-width: 375px) {
   #topbar .inner-section .container .wrapper .items {
-    grid-template-columns: 1fr;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 #topbar .inner-section .container .wrapper .items .left {
@@ -1354,11 +1367,6 @@ form button {
   -ms-flex-align: center;
   align-items: center;
 }
-@media (max-width: 767px) {
-  #topbar .inner-section .container .wrapper .items .mid {
-    display: none;
-  }
-}
 #topbar .inner-section .container .wrapper .items .right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1373,6 +1381,9 @@ form button {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 #topbar .inner-section .container .wrapper .items .right .icons.horizontal {
   width: 100%;
@@ -1633,6 +1644,22 @@ form button {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  #header-menu .inner-section .container .wrapper .items .left nav .mid.in-nav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 40px;
   }
 }
 #header-menu .inner-section .container .wrapper .items .left nav ul {

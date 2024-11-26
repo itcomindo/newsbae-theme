@@ -17,11 +17,14 @@
           display: grid;
           grid-template-columns: 200px 1fr 200px;
           align-items: center;
-          @media (max-width: 767px) {
-            grid-template-columns: repeat(2, 1fr);
+          @media (max-width: 768px) {
+            display: flex;
+            flex-direction: row;
+            grid-template-columns: unset;
           }
           @media (max-width: 375px) {
-            grid-template-columns: 1fr;
+            flex-direction: column;
+            justify-content: center;
           }
           .left {
             display: flex;
@@ -63,15 +66,13 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            @media (max-width: 767px) {
-              display: none;
-            }
           }
           .right {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
+            flex-grow: 1;
             .icons.horizontal {
               width: 100%;
               ul {

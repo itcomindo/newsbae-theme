@@ -63,6 +63,16 @@
                 }
               }
 
+              @media (max-width: 768px) {
+                .mid.in-nav {
+                  width: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  margin-bottom: 40px;
+                }
+              }
+
               ul {
                 height: 100%;
                 display: flex;
