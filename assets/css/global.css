@@ -2680,14 +2680,24 @@ aside .widget ul li {
   margin: 4px 0;
 }
 .ads.width-full.m540 {
-  display: none;
+  margin-top: -300px;
   border-radius: 0;
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+  height: 300px;
+  position: relative;
+  z-index: -1;
 }
 @media (max-width: 540px) {
-  .ads.width-full.m540 {
-    height: 100vh;
+  .ads.width-full.m540.active {
+    z-index: 20;
     background-color: var(--color-primary);
     color: var(--color-light-1);
+    margin-top: 0;
+  }
+  .ads.width-full.m540.inactive {
+    z-index: -1;
+    margin-top: -300px;
   }
   .ads.width-full.m540 .ads-inner {
     height: 100%;

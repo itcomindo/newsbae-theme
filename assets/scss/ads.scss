@@ -17,12 +17,23 @@
       }
     }
     &.m540 {
-      display: none;
+      margin-top: -300px;
       border-radius: 0;
+      transition: 0.3s linear all;
+      height: 300px;
+      position: relative;
+      z-index: -1;
       @media (max-width: 540px) {
-        height: 100vh;
-        background-color: var(--color-primary);
-        color: var(--color-light-1);
+        &.active {
+          z-index: 20;
+          background-color: var(--color-primary);
+          color: var(--color-light-1);
+          margin-top: 0;
+        }
+        &.inactive {
+          z-index: -1;
+          margin-top: -300px;
+        }
         .ads-inner {
           height: 100%;
           position: relative;

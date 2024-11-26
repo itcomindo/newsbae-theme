@@ -1,6 +1,22 @@
 jQuery(function () {
     // Move Search to Nav
 
+
+    //adsBeforeTopbar Start.
+    function adsBeforeTopbar() {
+        var $screenWidth = jQuery(window).width();
+        if ($screenWidth < 541) {
+            setTimeout(function () {
+                jQuery('#adsbfh540').addClass('active');
+            }, 1500);
+            jQuery('#adsbfh540 .ads-close').on('click', function () {
+                jQuery('#adsbfh540').removeClass('active').addClass('inactive');
+            });
+        }
+    }
+    adsBeforeTopbar();
+    //adsBeforeTopbar End.
+
     // Debounce function
     function debounce(func, wait) {
         var timeout;
