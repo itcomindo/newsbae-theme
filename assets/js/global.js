@@ -34,6 +34,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }
             });
 
+
+            jQuery('#adsafhm').slideUp(300, function () {
+                console.log('Ads closed');
+            });
+
+
+
+
+
             // Klik di mana saja untuk menutup menu
             jQuery(document).on('click', function () {
                 $menu.removeClass('active');

@@ -7,12 +7,10 @@
  */
 
 defined('ABSPATH') || die('No script kiddies please!');
-
 ?>
-
 <div id="topbar" class="section">
     <div class="inner-section">
-        <div class="contaier">
+        <div class="container">
             <div class="wrapper">
                 <div class="items">
                     <div class="left">
