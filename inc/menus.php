@@ -36,8 +36,6 @@ function nbt_menus($location, $container_class = '', $menu_class = '')
 {
     $args = array(
         'theme_location' => $location,
-        'container' => 'nav',
-        'container_class' => $container_class,
         'menu_class' => $menu_class
     );
 

@@ -1,27 +1,5 @@
 jQuery(function () {
     // Move Search to Nav
-    function moveSearchToNav() {
-        var $screenWidth = jQuery(window).width();
-        var $search = jQuery('#topbar .mid');
-        var $nav = jQuery('#header-menu nav');
-        var $items = jQuery('#topbar .items');
-        var $left = $items.find('.left');
-        var $right = $items.find('.right');
-
-        if ($search.length && $nav.length && $items.length) {
-            if ($screenWidth < 769) {
-                $search.prependTo($nav);
-                $search.addClass('in-nav');
-            } else {
-                if ($left.length && $right.length) {
-                    $search.insertAfter($left);
-                } else {
-                    $search.appendTo($items);
-                }
-                $search.removeClass('in-nav');
-            }
-        }
-    }
 
     // Debounce function
     function debounce(func, wait) {
@@ -46,7 +24,7 @@ jQuery(function () {
     // OffCanvas Menu
     function offCanvasMenu() {
         var $toggle = jQuery('.bars.toggle');
-        var $menu = jQuery('nav.header-menu');
+        var $menu = jQuery('nav#header-menu-nav');
         var $bar = jQuery('.bar');
 
         $toggle.on('click', function (e) {
@@ -78,10 +56,9 @@ jQuery(function () {
     }
 
     // Inisialisasi semua fungsi
-    moveSearchToNav();
     makeBodyOverflowHidden();
     offCanvasMenu();
 
     // Optimasi resize
-    jQuery(window).resize(debounce(moveSearchToNav, 200));
+    // jQuery(window).resize(debounce(moveSearchToNav, 200));
 });

@@ -16,11 +16,9 @@ defined('ABSPATH') || die('No script kiddies please!');
                     <div class="left">
                         <div class="ihome"><a href="/" title="<?php echo esc_html(nbt_site_title()); ?>"><i class="fas fa-house"></i></a></div><span>Newsbae Themes</span>
                     </div>
-                    <div class="mid">
-                        <?php
-                        get_template_part('parts/part', 'search-form');
-                        ?>
-                    </div>
+                    <?php
+                    get_template_part('components/component', 'topbar-mid');
+                    ?>
                     <div class="right">
                         <div class="icons horizontal">
                             <ul class="list-no-style">

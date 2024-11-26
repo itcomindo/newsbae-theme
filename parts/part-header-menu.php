@@ -16,9 +16,15 @@ defined('ABSPATH') || die('No script kiddies please!');
             <div class="wrapper">
                 <div class="items">
                     <div class="left">
-                        <?php
-                        nbt_menus('header', 'header-menu', 'header-menu__list');
-                        ?>
+
+                        <nav id="header-menu-nav" class="">
+                            <?php
+                            get_template_part('components/component', 'topbar-mid');
+                            ?>
+                            <?php
+                            nbt_menus('header', 'header-menu', 'header-menu__list');
+                            ?>
+                        </nav>
                     </div>
                     <div class="right">
                         <?php
