@@ -40,7 +40,7 @@ jQuery(function () {
     // OffCanvas Menu
     function offCanvasMenu() {
         var $toggle = jQuery('.bars.toggle');
-        var $menu = jQuery('nav#header-menu-nav');
+        var $menu = jQuery('nav#offcanvas-menu-nav');
         var $bar = jQuery('.bar');
 
         $toggle.on('click', function (e) {
@@ -48,13 +48,13 @@ jQuery(function () {
             $menu.toggleClass('active');
             $bar.toggleClass('active');
 
-            if ($menu.hasClass('active')) {
-                if (!$menu.find('.closer').length) {
-                    $menu.append('<div class="closer">X</div>');
-                }
-            } else {
-                jQuery('.closer').remove();
-            }
+            // if ($menu.hasClass('active')) {
+            //     if (!$menu.find('.closer').length) {
+            //         $menu.append('<div class="closer">X</div>');
+            //     }
+            // } else {
+            //     jQuery('.closer').remove();
+            // }
         });
 
         jQuery(document).on('click', function () {
