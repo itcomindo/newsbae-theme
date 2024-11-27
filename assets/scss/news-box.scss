@@ -158,18 +158,6 @@
               }
             }
           }
-          .right {
-            width: 320px;
-            display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            padding: 10px;
-            background-color: var(--color-light-1);
-            @media (max-width: 840px) {
-              width: 100%;
-              flex-shrink: unset;
-            }
-          }
         }
       }
     }

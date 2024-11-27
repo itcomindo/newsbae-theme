@@ -36,9 +36,13 @@ if ('video' === $nbt_post_type) {
                         ?>
                     </div>
                 </div>
-                <div class="right">
+                <div id="sidebar-container" class="right">
                     <?php
-                    get_template_part('parts/part-single-sidebar');
+                    if (is_active_sidebar('post-sidebar')) : ?>
+                        <aside id="post-sidebar" class="sidebar">
+                            <?php dynamic_sidebar('post-sidebar'); ?>
+                        </aside>
+                    <?php endif;
                     ?>
                 </div>
 

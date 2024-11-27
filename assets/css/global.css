@@ -2503,21 +2503,6 @@ form button {
 #sing .inner-section .container .wrapper .left #the-content h5 {
   font-size: var(--font-clamp-1);
 }
-#sing .inner-section .container .wrapper .right {
-  width: 320px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-@media (max-width: 840px) {
-  #sing .inner-section .container .wrapper .right {
-    width: 100%;
-  }
-}
 
 #news-box .inner-section .container .wrapper {
   display: -webkit-box;
@@ -2713,7 +2698,9 @@ form button {
     font-size: 85%;
   }
 }
-#news-box .inner-section .container .wrapper .news-box-content .right {
+
+#sidebar-container {
+  background-color: var(--color-light-1);
   width: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2725,17 +2712,15 @@ form button {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   padding: 10px;
-  background-color: var(--color-light-1);
 }
 @media (max-width: 840px) {
-  #news-box .inner-section .container .wrapper .news-box-content .right {
+  #sidebar-container {
     width: 100%;
     -ms-flex-negative: unset;
     flex-shrink: unset;
   }
 }
-
-aside {
+#sidebar-container aside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2747,41 +2732,41 @@ aside {
   box-sizing: border-box;
   padding: 0 10px;
 }
-aside .widget {
+#sidebar-container aside .widget {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-aside .widget a:has(img) {
+#sidebar-container aside .widget a:has(img) {
   display: block;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
 }
-aside .widget a:has(img) img {
+#sidebar-container aside .widget a:has(img) img {
   max-width: 100%;
   height: auto;
   border-radius: 7px;
 }
-aside .widget h2.wp-block-heading {
+#sidebar-container aside .widget h2.wp-block-heading {
   margin: 4px 0;
 }
-aside .widget iframe {
+#sidebar-container aside .widget iframe {
   aspect-ratio: 16/9;
   width: 100%;
   border-radius: 7px;
   overflow: hidden;
 }
-aside .widget figure {
+#sidebar-container aside .widget figure {
   max-width: 100%;
   overflow: hidden;
   margin: 0;
   border-radius: 7px;
 }
-aside .widget figure img {
+#sidebar-container aside .widget figure img {
   max-width: 100%;
   height: auto;
 }
-aside .widget ul {
+#sidebar-container aside .widget ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2802,7 +2787,7 @@ aside .widget ul {
   box-sizing: border-box;
   row-gap: 5px;
 }
-aside .widget ul li {
+#sidebar-container aside .widget ul li {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 4px;

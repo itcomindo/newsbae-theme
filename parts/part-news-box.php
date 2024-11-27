@@ -67,7 +67,7 @@ defined('ABSPATH') || die('No script kiddies please!');
                             </div>
                         </div>
                     </div>
-                    <div class="right">
+                    <div id="sidebar-container" class="right">
                         <?php
                         if (is_active_sidebar('homepage-sidebar')) : ?>
                             <aside id="homepage-sidebar" class="sidebar">
