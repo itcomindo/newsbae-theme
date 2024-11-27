@@ -23,7 +23,7 @@ defined('ABSPATH') || die('No script kiddies please!');
                             <div class="content">
                                 <h3>Video:</h3>
                                 <?php
-                                nbt_query_video_post($posts_perpage = 3);
+                                nbt_query_video_post($posts_perpage = 4);
                                 ?>
                             </div>
 
@@ -38,7 +38,7 @@ defined('ABSPATH') || die('No script kiddies please!');
                             <div class="content">
                                 <h3>Foto:</h3>
                                 <?php
-                                nbt_query_gallery_post($posts_perpage = 3);
+                                nbt_query_gallery_post($posts_perpage = 4);
                                 ?>
                             </div>
 

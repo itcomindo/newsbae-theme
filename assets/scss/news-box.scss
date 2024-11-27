@@ -111,32 +111,39 @@
                       .bot {
                         h3 {
                           font-weight: 500;
-                          @media (max-width: 540px) {
+                          @media (max-width: 640px) {
                             font-size: 85%;
                             font-weight: 400;
                             line-height: 1.7;
+                            a {
+                              text-decoration: none;
+                            }
+                          }
+                          @media (max-width: 540px) {
                             overflow: hidden;
                             text-overflow: ellipsis;
                             display: -webkit-box;
                             -webkit-line-clamp: 3;
                             -webkit-box-orient: vertical;
-                            a {
-                              text-decoration: none;
-                            }
                           }
                         }
                       }
 
                       &:first-child {
-                        @media (max-width: 540px) {
-                          display: grid;
-                          grid-column: span 2;
-                          grid-template-columns: 100px 1fr;
-                          box-shadow: none;
-                          padding: 10px 0;
+                        grid-column: span 3;
+                        @media (max-width: 640px) {
                           .bot {
-                            padding-top: 0;
-                            padding-bottom: 0;
+                            h3 {
+                              font-size: var(--font-clamp-2);
+                              font-weight: 600;
+                            }
+                          }
+                        }
+                        @media (max-width: 540px) {
+                          grid-column: unset;
+                          box-shadow: none;
+                          padding: 0;
+                          .bot {
                             h3 {
                               margin-top: 4px;
                               margin-bottom: 4px;
