@@ -51,7 +51,7 @@ defined('ABSPATH') || die('No script kiddies please!');
                                 </div>
                                 <div class="group">
                                     <h3 class="head-small">Hot News</h3>
-                                    <nav id="footer-menu-1">
+                                    <nav id="footer-menu-2">
                                         <ul class="list-no-style vertical">
                                             <li><a href="#">Kupret</a></li>
                                             <li><a href="#">Kupret</a></li>

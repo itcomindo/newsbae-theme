@@ -68,13 +68,13 @@ defined('ABSPATH') || die('No script kiddies please!');
                         </div>
                     </div>
                     <div id="sidebar-container" class="right">
-                        <?php
-                        if (is_active_sidebar('homepage-sidebar')) : ?>
-                            <aside id="homepage-sidebar" class="sidebar">
-                                <?php dynamic_sidebar('homepage-sidebar'); ?>
-                            </aside>
-                        <?php endif;
-                        ?>
+                        <aside id="homepage-sidebar" class="aside">
+                            <?php
+                            if (is_active_sidebar('homepage-sidebar')) {
+                                dynamic_sidebar('homepage-sidebar');
+                            }
+                            ?>
+                        </aside>
                     </div>
                 </div>
             </div>

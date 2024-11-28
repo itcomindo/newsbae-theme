@@ -2713,13 +2713,6 @@ form button {
   flex-shrink: 0;
   padding: 10px;
 }
-@media (max-width: 840px) {
-  #sidebar-container {
-    width: 100%;
-    -ms-flex-negative: unset;
-    flex-shrink: unset;
-  }
-}
 #sidebar-container aside {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2731,43 +2724,10 @@ form button {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 10px;
+  gap: 10px;
 }
-#sidebar-container aside .widget {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-#sidebar-container aside .widget a:has(img) {
-  display: block;
-  width: 100%;
+#sidebar-container aside .widget.widget_block {
   max-width: 100%;
-  overflow: hidden;
-}
-#sidebar-container aside .widget a:has(img) img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 7px;
-}
-#sidebar-container aside .widget h2.wp-block-heading {
-  margin: 4px 0;
-}
-#sidebar-container aside .widget iframe {
-  aspect-ratio: 16/9;
-  width: 100%;
-  border-radius: 7px;
-  overflow: hidden;
-}
-#sidebar-container aside .widget figure {
-  max-width: 100%;
-  overflow: hidden;
-  margin: 0;
-  border-radius: 7px;
-}
-#sidebar-container aside .widget figure img {
-  max-width: 100%;
-  height: auto;
-}
-#sidebar-container aside .widget ul {
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2775,31 +2735,69 @@ form button {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0;
-  margin: 0;
+  overflow: hidden;
+}
+#sidebar-container aside .widget.widget_block h2,
+#sidebar-container aside .widget.widget_block h3,
+#sidebar-container aside .widget.widget_block h4 {
+  margin: 4px 0;
+}
+#sidebar-container aside .widget.widget_block figure {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
   -webkit-margin-before: 0;
   margin-block-start: 0;
   -webkit-margin-after: 0;
   margin-block-end: 0;
-  -webkit-padding-start: 0;
-  padding-inline-start: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  row-gap: 5px;
+  -webkit-margin-start: 0;
+  margin-inline-start: 0;
+  -webkit-margin-end: 0;
+  margin-inline-end: 0;
 }
-#sidebar-container aside .widget ul li {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-bottom: 4px;
+#sidebar-container aside .widget.widget_block figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
-
-#sidebar-container .sidebar .widget {
+#sidebar-container aside .widget.widget_block:has(a):has(img) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#sidebar-container aside .widget.widget_block:has(a):has(img) a {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+#sidebar-container aside .widget.widget_block:has(a):has(img) img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+#sidebar-container aside .widget.widget_block:has(iframe) {
+  margin-bottom: 20px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+#sidebar-container aside .widget.widget_block:has(iframe) iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+#sidebar-container aside .widget.widget_nbt_recent_posts_widget {
   margin-bottom: 20px;
 }
-#sidebar-container .sidebar .widget.widget_nbt_recent_posts_widget {
-  margin-bottom: 20px;
-}
-#sidebar-container .sidebar .widget.widget_nbt_recent_posts_widget .items {
+#sidebar-container aside .widget.widget_nbt_recent_posts_widget .items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2810,7 +2808,7 @@ form button {
   gap: 20px;
   margin-bottom: 20px;
 }
-#sidebar-container .sidebar .widget.widget_nbt_recent_posts_widget .items .item.nofim {
+#sidebar-container aside .widget.widget_nbt_recent_posts_widget .items .item.nofim {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2823,7 +2821,7 @@ form button {
   -ms-flex-pack: center;
   justify-content: center;
 }
-#sidebar-container .sidebar .widget.widget_nbt_recent_posts_widget .items .item.nofim .left {
+#sidebar-container aside .widget.widget_nbt_recent_posts_widget .items .item.nofim .left {
   position: absolute;
   top: -5px;
   width: 30px;
@@ -2844,15 +2842,15 @@ form button {
   background-color: var(--color-light-2);
   border-radius: 50%;
 }
-#sidebar-container .sidebar .widget.widget_nbt_recent_posts_widget .items .item.nofim .right {
+#sidebar-container aside .widget.widget_nbt_recent_posts_widget .items .item.nofim .right {
   padding: 0 5px 0 40px;
 }
-#sidebar-container .sidebar .widget.widget_nbt_recent_posts_widget .items .item.nofim .right h3 {
+#sidebar-container aside .widget.widget_nbt_recent_posts_widget .items .item.nofim .right h3 {
   margin: 0;
   font-size: 14px;
   font-weight: 400;
 }
-#sidebar-container .sidebar .widget.widget_nbt_recent_posts_widget .items .item.fim {
+#sidebar-container aside .widget.widget_nbt_recent_posts_widget .items .item.fim {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2861,25 +2859,32 @@ form button {
   -ms-flex-direction: row;
   flex-direction: row;
 }
-#sidebar-container .sidebar .widget.widget_nbt_recent_posts_widget .items .item.fim .left {
+#sidebar-container aside .widget.widget_nbt_recent_posts_widget .items .item.fim .left {
   width: 100px;
   aspect-ratio: 16/9;
   overflow: hidden;
 }
-#sidebar-container .sidebar .widget.widget_nbt_recent_posts_widget .items .item.fim .left img {
+#sidebar-container aside .widget.widget_nbt_recent_posts_widget .items .item.fim .left img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 10px;
 }
-#sidebar-container .sidebar .widget.widget_nbt_recent_posts_widget .items .item.fim .right {
+#sidebar-container aside .widget.widget_nbt_recent_posts_widget .items .item.fim .right {
   padding: 0 5px 0 10px;
 }
-#sidebar-container .sidebar .widget.widget_nbt_recent_posts_widget .items .item.fim .right h3 {
+#sidebar-container aside .widget.widget_nbt_recent_posts_widget .items .item.fim .right h3 {
   margin: 0;
   font-size: 14px;
   font-weight: 400;
+}
+@media (max-width: 840px) {
+  #sidebar-container {
+    width: 100%;
+    -ms-flex-negative: unset;
+    flex-shrink: unset;
+  }
 }
 
 .ads {
