@@ -2464,6 +2464,15 @@ form button {
 #sing .inner-section .container .wrapper .left .row {
   padding: 0 20px;
 }
+#sing .inner-section .container .wrapper .left .fim {
+  width: 100%;
+}
+#sing .inner-section .container .wrapper .left .fim img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 #sing .inner-section .container .wrapper .left #the-content {
   margin-top: 20px;
 }

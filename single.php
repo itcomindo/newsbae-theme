@@ -28,8 +28,22 @@ if ('video' === $nbt_post_type) {
         <div class="container">
             <div class="wrapper">
                 <div class="left">
-                    <?php nbt_video_player(); ?>
-                    <?php nbt_gallery_player(); ?>
+                    <?php
+                    if ('video' === carbon_get_the_post_meta('nbt_post')) {
+                        nbt_video_player();
+                    } elseif ('gallery' === carbon_get_the_post_meta('nbt_post')) {
+                        nbt_gallery_player();
+                    } else {
+                        get_template_part('parts/part-single-meta');
+                    ?>
+                        <div class="fim">
+                            <?php
+                            nbt_post_featured_image(get_the_ID(), 'full', false);
+                            ?>
+                        </div>
+                    <?php
+                    }
+                    ?>
                     <div id="the-content">
                         <?php
                         the_content();
