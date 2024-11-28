@@ -33,6 +33,7 @@
         flex-direction: column;
         padding: 20px 10px;
         gap: 10px;
+        position: relative;
         .top {
           display: flex;
           flex-direction: column;
@@ -102,6 +103,7 @@
                   flex-direction: row;
                   @media (max-width: 640px) {
                     flex-direction: column;
+                    gap: 40px;
                   }
                   .group {
                     width: calc(100% / 2 - 10px);
@@ -121,23 +123,60 @@
         .copyright {
           display: flex;
           flex-direction: row;
+          position: absolute;
+          bottom: -5rem;
+
+          @media (max-width: 840px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+          }
+
+          @media (max-width: 640px) {
+            gap: 10px;
+          }
+          @media (max-width: 540px) {
+            bottom: unset;
+            position: relative;
+            margin-top: 2.5rem;
+          }
+
           .left {
             display: flex;
             flex-direction: column;
             width: calc(100% / 2 - 20px);
+
+            @media (max-width: 840px) {
+              width: 100%;
+              align-items: center;
+              order: 2;
+            }
           }
           .right {
             display: flex;
             flex-direction: column;
             width: calc(100% / 2 - 20px);
+
+            @media (max-width: 840px) {
+              width: 100%;
+              order: 1;
+            }
+
             nav {
               box-sizing: border-box;
               width: 100%;
               ul {
                 display: flex;
                 flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                @media (max-width: 840px) {
+                  width: 100%;
+                  justify-content: center;
+                }
                 li {
                   border-bottom: none;
+                  width: max-content;
                   a {
                     color: var(--bg-primary);
                   }
