@@ -1,0 +1,68 @@
+#sidebar-container {
+  .sidebar {
+    .widget {
+      margin-bottom: 20px;
+      &.widget_nbt_recent_posts_widget {
+        margin-bottom: 20px;
+        .items {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          margin-bottom: 20px;
+          .item {
+            &.nofim {
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              .left {
+                position: absolute;
+                top: -5px;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--color-light-2);
+                border-radius: 50%;
+              }
+              .right {
+                padding: 0 5px 0 40px;
+                h3 {
+                  margin: 0;
+                  font-size: 14px;
+                  font-weight: 400;
+                }
+              }
+            }
+
+            &.fim {
+              display: flex;
+              flex-direction: row;
+              .left {
+                width: 100px;
+                aspect-ratio: 16/9;
+                overflow: hidden;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-radius: 10px;
+                }
+              }
+              .right {
+                padding: 0 5px 0 10px;
+                h3 {
+                  margin: 0;
+                  font-size: 14px;
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

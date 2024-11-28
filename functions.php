@@ -7,6 +7,8 @@
  */
 
 defined('ABSPATH') || die('No script kiddies please!');
+
+
 // Add Theme Supports.
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
