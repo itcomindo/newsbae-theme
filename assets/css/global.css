@@ -2533,6 +2533,58 @@ form button {
 #sing .inner-section .container .wrapper .left #the-content h5 {
   font-size: var(--font-clamp-1);
 }
+#sing .inner-section .container .wrapper .left .share-post {
+  background-color: var(--cp1-dark);
+  padding-top: 8px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  color: var(--color-light-3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+}
+#sing .inner-section .container .wrapper .left .share-post ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+#sing .inner-section .container .wrapper .left .share-post ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: var(--color-light-3);
+}
+#sing .inner-section .container .wrapper .left .share-post ul li a i {
+  font-size: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#sing .inner-section .container .wrapper .left .share-post ul li a:hover i {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 
 #news-box .inner-section .container .wrapper {
   display: -webkit-box;

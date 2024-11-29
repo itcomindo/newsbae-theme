@@ -12,6 +12,7 @@ defined('ABSPATH') || die('No script kiddies please!');
 require_once THEME_PATH . '/inc/options/options-theme.php';
 require_once THEME_PATH . '/inc/options/field-global-option.php';
 require_once THEME_PATH . '/inc/options/field-home-option.php';
+require_once THEME_PATH . '/inc/options/field-single-post-option.php';
 
 
 // Post Meta Group.
