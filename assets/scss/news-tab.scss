@@ -20,11 +20,26 @@
               align-items: center;
               border-bottom: 2px solid var(--color-primary);
               ul {
+                &.triggers {
+                  &::-webkit-scrollbar {
+                    width: 15px; /* Atur lebar scrollbar */
+                  }
+
+                  &::-webkit-scrollbar-thumb {
+                    background-color: red;
+                    border-radius: 10px;
+                  }
+
+                  scrollbar-width: thin; /* Untuk Firefox */
+                }
+
                 display: flex;
                 flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
+                justify-content: flex-start;
+                width: 100%;
                 gap: 20px;
+                overflow-x: auto;
+
                 li {
                   cursor: pointer;
                   padding: 6px 12px;
@@ -32,9 +47,19 @@
                   flex-direction: column;
                   align-items: center;
                   justify-content: center;
+
                   &.active {
                     background-color: var(--color-primary);
                     color: var(--color-light-1);
+                  }
+                }
+
+                @media (max-width: 540px) {
+                  gap: 10px;
+
+                  li {
+                    padding: 6px 6px;
+                    font-size: 95%;
                   }
                 }
               }
@@ -48,7 +73,7 @@
               padding: 10px;
               .group {
                 display: flex;
-                white-space: nowrap;
+                // white-space: nowrap;
                 flex-direction: column;
                 top: 0;
                 left: 0;
@@ -62,8 +87,104 @@
                   transform: translateX(0);
                   display: flex;
                   position: relative;
-                  // background-color: var(--color-light-3);
                   z-index: 1;
+                }
+                .items {
+                  display: grid;
+                  grid-template-columns: repeat(4, 1fr);
+                  gap: 10px;
+                  .item {
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+                    background-color: var(--color-light-2);
+                    border-radius: 10px;
+                    box-shadow: var(--box-shadow-1);
+                    .top {
+                      aspect-ratio: 16/9;
+                      overflow: hidden;
+                      a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        overflow: hidden;
+                        img {
+                          width: 100%;
+                          height: 100%;
+                          object-fit: cover;
+                        }
+                      }
+                    }
+                    .bot {
+                      display: flex;
+                      flex-direction: column;
+                      white-space: wrap;
+                      padding: 20px 10px;
+                      h3 {
+                        font-size: 16px;
+                        font-weight: 500;
+                      }
+                    }
+                    &:first-child {
+                      grid-column: span 2;
+                      grid-row: span 2;
+                      position: relative;
+                      .top {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        aspect-ratio: unset;
+                        width: 100%;
+                        height: 100%;
+                        a {
+                          position: relative;
+                          display: block;
+                          width: 100%;
+                          height: 100%;
+                          overflow: hidden;
+                          img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                          }
+                        }
+                      }
+                      .bot {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        padding: 20px 10px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        background: linear-gradient(
+                          to bottom,
+                          transparent,
+                          var(--transparent-dark-2),
+                          var(--transparent-dark-5),
+                          var(--transparent-dark-9)
+                        );
+                        h3 {
+                          font-size: var(--font-clamp-2);
+                          a {
+                            color: var(--color-light-1);
+                          }
+                        }
+                      }
+                    }
+                  }
+                  @media (max-width: 767px) {
+                    grid-template-columns: repeat(2, 1fr);
+                    .item {
+                      &:first-child {
+                        grid-column: span 2;
+                        grid-row: unset;
+                        aspect-ratio: 16/9;
+                      }
+                    }
+                  }
                 }
               }
             }
