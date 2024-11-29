@@ -86,8 +86,21 @@ function nbt_newstabs_trigger()
                             ?>
                                     <div class="item">
                                         <div class="top">
-                                            <a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_html(get_the_title()); ?>"><?php echo nbt_post_featured_image($the_post_id, 'full', true); ?></a>
+                                            <a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_html(get_the_title()); ?>">
+                                                <?php
+                                                add_filter('wp_get_attachment_image_attributes', function ($attr) {
+                                                    $attr['loading'] = 'lazy';
+                                                    return $attr;
+                                                });
+                                                the_post_thumbnail('full', array('alt' => get_the_title(), 'title' => get_the_title()));
+                                                remove_filter('wp_get_attachment_image_attributes', function ($attr) {
+                                                    $attr['loading'] = 'lazy';
+                                                    return $attr;
+                                                });
+                                                ?>
+                                            </a>
                                         </div>
+
                                         <div class="bot">
                                             <h3>
                                                 <a href="<?php echo esc_html(get_the_permalink()); ?>"><?php echo nbt_post_title($the_post_id, 100); ?></a>
