@@ -169,6 +169,7 @@ define('THEME_VERSION', wp_get_theme()->get('Version'));
 // Call Nesesary Files.
 require_once THEME_PATH . '/assets/assets.php';
 require_once THEME_PATH . '/components/components.php';
+require_once THEME_PATH . '/yano-customizer/yano-customizer.php';
 require_once THEME_PATH . '/inc/inc.php';
 require_once THEME_PATH . '/parts/parts.php';
 
