@@ -1,5 +1,7 @@
 # NewsBae Theme
 
+![Screenshot](screenshot.png)
+
 NewsBae is a free WordPress theme for news and magazine websites. It is fully responsive and includes multiple widget areas, custom widgets, and a theme options panel for easy customization.
 
 With NewsBae, you can create a professional news website without any coding knowledge. The theme is optimized for speed and SEO to help your website rank higher in search engines.
@@ -38,3 +40,8 @@ Use the Theme Options Panel to customize the theme according to your needs. You 
 ## Support
 
 For any support or questions, please contact our support team at [github.budiharyono@gmail.com](mailto:support@example.com).
+
+
+
+
+![Screenshot](options-1.png)
