@@ -16,6 +16,10 @@ You can create specific post e.g post contains video, gallery, recipe, code and 
 - [Customization](#customization)
 - [Support](#support)
 
+## Demo
+
+You can view a live demo of the theme [here](https://newsbae.budiharyono.id/).
+
 ## Features
 
 - **Responsive Design**: The theme is fully responsive and looks great on all devices.
