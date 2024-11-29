@@ -36,7 +36,7 @@ defined('ABSPATH') || die('No script kiddies please!');
                             <div class="group active" data-cat="9">
                                 <h3 class="head head-smaller">Hiburan</h3>
                                 <?php
-                                nbt_dummy_card(8);
+                                nbt_dummy_card(5);
                                 ?>
                             </div>
 
@@ -44,7 +44,7 @@ defined('ABSPATH') || die('No script kiddies please!');
                             <div class="group" data-cat="7">
                                 <h3 class="head head-smaller">Kesehatan</h3>
                                 <?php
-                                nbt_dummy_card(8);
+                                nbt_dummy_card(5);
                                 ?>
                             </div>
 
@@ -52,7 +52,7 @@ defined('ABSPATH') || die('No script kiddies please!');
                             <div class="group" data-cat="3">
                                 <h3 class="head head-smaller">Keuangan</h3>
                                 <?php
-                                nbt_dummy_card(8);
+                                nbt_dummy_card(5);
                                 ?>
                             </div>
 
@@ -60,7 +60,7 @@ defined('ABSPATH') || die('No script kiddies please!');
                             <div class="group" data-cat="6">
                                 <h3 class="head head-smaller">Makanan</h3>
                                 <?php
-                                nbt_dummy_card(8);
+                                nbt_dummy_card(5);
                                 ?>
                             </div>
 
@@ -68,7 +68,7 @@ defined('ABSPATH') || die('No script kiddies please!');
                             <div class="group" data-cat="2">
                                 <h3 class="head head-smaller">Olahraga</h3>
                                 <?php
-                                nbt_dummy_card(8);
+                                nbt_dummy_card(5);
                                 ?>
                             </div>
                         </div>
