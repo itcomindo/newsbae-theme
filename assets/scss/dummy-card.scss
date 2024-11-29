@@ -1,0 +1,14 @@
+.items.dummy {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  overflow: hidden;
+  .item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--transparent-dark-1);
+    box-shadow: var(--box-shadow-1);
+    background-color: var(--color-light-2);
+    padding: 40px 20px;
+  }
+}

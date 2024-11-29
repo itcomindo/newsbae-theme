@@ -67,12 +67,35 @@ window.addEventListener('DOMContentLoaded', (event) => {
             smoothScroll();
         }
         newsTicker();
-
-
-
-
-        newsTicker();
         // Newsticker End.
+
+        // newsTab start.
+        function newsTab() { }
+        var $trigger = jQuery('.triggers .trigger');
+
+        jQuery($trigger).on('click', function () {
+            var $this = jQuery(this).attr('data-cat');
+            jQuery('.triggers .trigger').removeClass('active');
+            jQuery(this).addClass('active');
+            console.log($this);
+
+            // Content. find same value of data-cat in elemen .group, then add class active. And remove class active from other element.
+
+            jQuery('.group').removeClass('active');
+
+            jQuery('.group').each(function () {
+                if (jQuery(this).attr('data-cat') == $this) {
+                    jQuery(this).addClass('active');
+                }
+            });
+
+
+
+        });
+
+
+        newsTab();
+        // newsTab end.
 
 
 
