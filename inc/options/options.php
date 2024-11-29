@@ -11,6 +11,7 @@ defined('ABSPATH') || die('No script kiddies please!');
 // Theme Options Group.
 require_once THEME_PATH . '/inc/options/options-theme.php';
 require_once THEME_PATH . '/inc/options/field-global-option.php';
+require_once THEME_PATH . '/inc/options/field-home-option.php';
 
 
 // Post Meta Group.

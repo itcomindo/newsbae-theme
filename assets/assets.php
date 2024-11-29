@@ -66,3 +66,14 @@ function nbt_load_assets()
     }
 }
 add_action('wp_enqueue_scripts', 'nbt_load_assets');
+
+
+function nbt_admin_style_script()
+{
+    // Styles.
+    wp_enqueue_style('nbt-admin-style', THEME_ASSETS . '/css/nbt-admin.min.css', array(), THEME_VERSION, 'all');
+
+    // Scripts.
+    wp_enqueue_script('nbt-admin-script', THEME_ASSETS . '/js/nbt-admin.min.js', array(), THEME_VERSION, true);
+}
+add_action('admin_enqueue_scripts', 'nbt_admin_style_script');

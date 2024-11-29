@@ -1,0 +1,29 @@
+ul.cf-container__tabs-list .cf-container__tabs-item--current {
+  background-color: #333;
+}
+ul.cf-container__tabs-list .cf-container__tabs-item--current button {
+  color: whitesmoke;
+}
+
+.nbtsep .cf-field__body h3 {
+  margin: 4px 0;
+  font-size: 15px;
+}
+.nbtsep-child {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background-color: #333;
+  color: whitesmoke;
+}
+.nbtsep-child .cf-field__body h3 {
+  margin: 4px 0;
+  font-size: 14px;
+  color: whitesmoke;
+}
+
+.cf-complex__tabs.cf-complex__tabs--tabbed-horizontal
+  ul.cf-complex__tabs-list.ui-sortable
+  li.cf-complex__tabs-item--current {
+  background-color: #333;
+  color: whitesmoke;
+}
