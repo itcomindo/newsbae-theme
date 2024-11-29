@@ -13,6 +13,7 @@ require_once THEME_PATH . '/inc/menus.php';
 require_once THEME_PATH . '/inc/options/options.php';
 require_once THEME_PATH . '/inc/sidebars.php';
 require_once THEME_PATH . '/inc/plugins/plugins.php';
+require_once THEME_PATH . '/inc/customizers/customizer.php';
 
 // require_once THEME_PATH . '/inc/sidebars/widgets.php';
 
