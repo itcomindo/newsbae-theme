@@ -49,6 +49,11 @@ if ('video' === $nbt_post_type) {
                         the_content();
                         ?>
                     </div>
+                    <?php
+                    if (function_exists('nbto_single_post_options') && true === carbon_get_theme_option('nbto_share_post_enable')) {
+                        get_template_part('components/share-post');
+                    }
+                    ?>
                 </div>
                 <div id="sidebar-container" class="right">
                     <?php
