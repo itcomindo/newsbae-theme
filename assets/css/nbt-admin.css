@@ -5,11 +5,26 @@ ul.cf-container__tabs-list .cf-container__tabs-item--current button {
   color: whitesmoke;
 }
 
-.nbtsep .cf-field__body h3 {
-  margin: 4px 0;
-  font-size: 15px;
+.nbtsep.big {
+  background-color: darkgreen;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  color: whitesmoke !important;
 }
-.nbtsep-child {
+.nbtsep.medium {
+  background-color: darkred;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+.nbtsep .cf-field__body h3 {
+  color: whitesmoke;
+}
+.nbtsep em {
+  color: whitesmoke !important;
+  margin-top: 0 !important;
+}
+
+.nbtsep-small {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   background-color: #333;
@@ -19,6 +34,11 @@ ul.cf-container__tabs-list .cf-container__tabs-item--current button {
   margin: 4px 0;
   font-size: 14px;
   color: whitesmoke;
+}
+
+.nbtsep .cf-field__body h3 {
+  margin: 4px 0;
+  font-size: 15px;
 }
 
 .cf-complex__tabs.cf-complex__tabs--tabbed-horizontal

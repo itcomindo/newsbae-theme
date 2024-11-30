@@ -9,6 +9,7 @@
 defined('ABSPATH') || die('No script kiddies please!');
 
 require_once THEME_PATH . '/inc/plugins/custom-post-column.php';
+require_once THEME_PATH . '/inc/plugins/core-optimizer.php';
 
 
 // under development.

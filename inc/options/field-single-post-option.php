@@ -19,7 +19,7 @@ function nbto_single_post_options()
 {
     return array(
         // Global Options.
-        Field::make('separator', 'singleposopsep', 'Home Options')->set_classes('nbtsep')
+        Field::make('separator', 'singleposopsep', 'Single Post Options')->set_classes('nbtsep big')
             ->set_help_text('Home Options where you can set the options for the home page.'),
 
         //Checkbox Enable Share Post Button.
@@ -30,6 +30,14 @@ function nbto_single_post_options()
 
         // Multi Select Share Post Button, Facebook, Twitter, WhatsApp, Telegram, Pinterest, LinkedIn, Email, Copy Link.
         Field::make('multiselect', 'nbto_share_post_platforms', 'Choose Platforms')
+            ->set_help_text('Choose the platforms you want to enable for sharing the post.')
+            ->set_conditional_logic(array(
+                array(
+                    'field' => 'nbto_share_post_enable',
+                    'value' => true,
+                ),
+            ))
+            ->set_default_value(array('facebook', 'twitter', 'whatsapp', 'telegram', 'pinterest', 'linkedin', 'email', 'copylink'))
             ->add_options(array(
                 'facebook' => 'Facebook',
                 'twitter' => 'Twitter',
@@ -40,6 +48,9 @@ function nbto_single_post_options()
                 'email' => 'Email',
                 'copylink' => 'Copy Link',
             ))
+
+
+
 
 
 

@@ -19,11 +19,11 @@ function nbto_home_options()
 {
     return array(
         // Global Options.
-        Field::make('separator', 'homeopsep', 'Home Options')->set_classes('nbtsep')
+        Field::make('separator', 'homeopsep', 'Home Options')->set_classes('nbtsep big')
             ->set_help_text('Home Options where you can set the options for the home page.'),
 
         // Newstab Options.
-        Field::make('separator', 'homeopnewstabsep', 'Newstab Options')->set_classes('nbtsep-child'),
+        Field::make('separator', 'homeopnewstabsep', 'Newstab Options')->set_classes('nbtsep medium'),
 
         //Checkbox Enable/Disable Newstab.
         Field::make('checkbox', 'newstab_enable', 'Enable Newstab')
